@@ -1,0 +1,13 @@
+{
+  "name": "shitcoin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nmiculinic/shitcoin.git",
+  "author": "Neven Miculinic <neven.miculinic@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ethereumjs-testrpc": "^4.1.3",
+    "truffle": "^3.4.11",
+    "zeppelin-solidity": "^1.3.0"
+  }
+}

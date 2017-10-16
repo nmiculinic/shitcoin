@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '8'
+install:
+- yarn
+script:
+- yarn truffle compile
+- yarn run -- testrpc > /tmp/testrpc.out &
+- yarn truffle test
+- cat /tmp/testrpc.out
+cache: yarn
+notifications:
+  slack:
+    secure: K7vaBd6PeSzm6SVlTfycgXIA2mTDTefijXF959VDCr4ekhUOB2bsf4yG9nj2JvlK4lvPsR5atKGomCmvizmn+5hjJpRAiOAyNBYX7bIRhyiBmW0u7FzO7sm7YE4q+CvnqBgjFbMDPjwYcOGCd7jkjwz94bL7Ag6vCqtY+aWLJDT2GgF+J0u7Mb1VInmWMZR4NYcX6b1pFyUsIPQODZQfZC+tDJwvL7eQBC9wOSYxrV2JObtLv9aNPEISdDiqrjvtOLdr8UXlulwwS6rNPg1VBnMFTi1PwAQ1hO69FQIJN+ZiVg3sy6dQm8rdGOPXbl3DLJCqsqK4/RoMd4XLvP6uL4KQhVODYMCDSmXn3RKaXOeSD5lAvI393LilFolhJ50ku1JMYHhjOxxvw5ij3umosJ3/U6pzZhuaFho++PByx+UT8EL5zrVyx0usD/hb4oNwKPPt2FH4RiSUWMrZj2iWFsFU/vge5Ly+UcLRUezMX7LUffwRUFvZqNwXifYEy0xJuBskSdhyTfk9bpk5Hh3KYpggeuGPGFXVIeNUJ2mRnzDRCeFV23XFfrnRWrT0VNVmf0wO4LzKC/mcX/3mZixqOW6gsQZRuzLvkMiIDRJuq2BINy951PjcG7iKT/tmX86EImIVzNmlxzq/DXZE9I5d0WifZChf2ONl3LaSxnhKWZ8=
